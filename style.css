@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Alexandria', sans-serif;
+}
+
+body {
+    background-color: #E3DBC4;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    margin: 30px auto;
+    padding: 0 30px;
+}
+
+.grid {
+    max-width: 700px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #FFF8E7;
+    box-shadow: 0px 5px 25px -5px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.card-image img {
+    max-width: 100%;
+    display: inherit;
+}
+
+.card-text {
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.ref-n-status {
+    display: flex;
+    align-items: center;
+}
+
+p.ref-num {
+    padding-right: 65px;
+    font-weight: 300;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li::before {
+    content: "\2022";
+    color: #54734E;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+ul.model-specs {
+    font-weight: 300;
+}
+
+p.availability {
+    background: #A23232;
+    border-radius: 10px;
+    text-align: center;
+    padding: 5px;
+    font-size: 12px;
+    font-weight: 700;
+    color: white;
+    width: 100px;
+}
+
+button.cta-main {
+    background: #657A61;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    border: none;
+    padding: 1em;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+    width: 100%;
+}
+
+button.cta-main:hover {
+    background-color: #384835;
+}
+
+button.cta-second {
+    border: 1.5px solid #0A2F25;
+    border-radius: 10px;
+    background: #FFF8E7;
+    color: #54734E;
+    padding: 1em;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+    width: 100%;
+}
+
+button.cta-second:hover {
+    background-color: #384835;
+    color: white;
+}
+
+@media screen and (max-width: 750px) {
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card-image img {
+        max-height: 450px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .card-text {
+        display: block;
+    }
+
+    p.ref-num {
+        padding-right: 200px;
+    }
+
+    .ref-n-status {
+        padding-bottom: 20px;
+    }
+
+    h2.model-name,
+    ul.model-specs {
+        padding-bottom: 20px;
+    }
+
+    .cta-main-div {
+        padding-bottom: 10px;
+    }
+}
